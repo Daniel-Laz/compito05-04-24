@@ -29,21 +29,19 @@ public class Main {
             System.out.println("non simmetrica");
     }
 
-    public static void trasposta(int[][] matrice){
-        for(int i=0; i<matrice.length; i++){
-            for (int j=0; j< matrice[i].length; j++){
-                int temp=matrice[i][j];
-                if (matrice[j][i]!=temp) {
-                    matrice[i][j] = matrice[j][i];
-                    matrice[j][i] = temp;
-                }
+    public static void trasposta(int[][] numeri){
+        for(int i=0; i<numeri.length; i++){
+            for (int j=i; j< numeri[i].length; j++){
+                int temp=numeri[i][j];
+                numeri[i][j] = numeri[j][i];
+                numeri[j][i] = temp;
             }
         }
     }
     public static boolean simmetria(int[][] matrice){
         boolean simmetrica=true;
         for(int i=0; i<matrice.length; i++){
-            for (int j=0; j< matrice[i].length; j++){
+            for (int j=i; j< matrice[i].length; j++){
                 if (matrice[i][j]!=matrice[j][i]){
                     simmetrica=false;
                     break;
