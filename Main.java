@@ -21,14 +21,7 @@ public class Main {
                                 {3,4,9,13},
                                 {8,11,13,15}};
         System.out.println("\narray per test simmetria:");
-        for(int i=0; i<testSimmetria.length; i++){
-            for (int j=0; j< testSimmetria[i].length; j++) {
-                if(testSimmetria[i][j]<10&&j!=0)
-                    System.out.print(" ");
-                System.out.print(testSimmetria[i][j] + " ");
-            }
-            System.out.println("");
-        }
+        System.out.println(stampa(testSimmetria));
         System.out.println("\nesito:");
         if(simmetria(testSimmetria))
             System.out.println("simmetrica");
@@ -85,9 +78,11 @@ public class Main {
         String stampa="";
         for(int i=0; i<matrice.length; i++){
             for (int j=0; j< matrice[i].length; j++) {
-                stampa+=(matrice[i][j] + " ");
+                if(matrice[i][j]<10&&j!=0)
+                    stampa+=" ";
+                stampa+=matrice[i][j] + " ";
             }
-            stampa+=("\n");
+            stampa+="\n";
         }
         return stampa;
     }
