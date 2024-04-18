@@ -27,6 +27,20 @@ public class Main {
             System.out.println("simmetrica");
         else
             System.out.println("non simmetrica");
+        System.out.println("\nsomma righe");
+        int[] aSommaR=sommaR(numeri);
+        System.out.println(stampa(numeri));
+        System.out.println("->");
+        System.out.println(stampa(aSommaR));
+    }
+    public static int[] sommaR (int[][] x){
+        int[] y=new int[x.length];
+        for (int i=0; i<x.length; i++){
+            for (int j=0; j<x[i].length; j++){
+                y[i]+=x[i][j];
+            }
+        }
+        return y;
     }
 
     public static void trasposta(int[][] numeri){
@@ -81,6 +95,13 @@ public class Main {
                 stampa+=matrice[i][j] + " ";
             }
             stampa+="\n";
+        }
+        return stampa;
+    }
+    public static String stampa(int[] matrice){
+        String stampa="";
+        for(int i=0; i<matrice.length; i++) {
+            stampa+=matrice[i]+ " ";
         }
         return stampa;
     }
