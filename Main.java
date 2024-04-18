@@ -35,7 +35,21 @@ public class Main {
         int[] aSommaC=sommaC(numeri);
         System.out.println("->colonne");
         System.out.println(stampa(aSommaC));
-
+        unoZero(numeri);
+        System.out.println("\ndiagonale (1 sotto la diagonale, 0 sopra)");
+        System.out.println(stampa(numeri));
+    }
+    public static void unoZero (int[][] x){
+        for (int i=0; i<x.length; i++){
+            for (int j=0; j<x[i].length; j++){
+                x[i][j]=1;
+            }
+        }
+        for(int i=0; i<x.length; i++){
+            for (int j=i+1; j< x[i].length; j++){
+                x[i][j]=0;
+            }
+        }
     }
     public static int[] sommaC (int[][] x){
         int[] y=new int[x.length];
