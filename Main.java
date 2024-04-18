@@ -36,7 +36,7 @@ public class Main {
         System.out.println("->colonne");
         System.out.println(stampa(aSommaC));
         unoZero(numeri);
-        System.out.println("\ndiagonale (1 sotto la diagonale, 0 sopra)");
+        System.out.println("\ndiagonale (1 sotto la diagonale 0 sopra)");
         System.out.println(stampa(numeri));
     }
     public static void unoZero (int[][] x){
