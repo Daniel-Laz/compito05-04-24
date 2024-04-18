@@ -27,14 +27,27 @@ public class Main {
             System.out.println("simmetrica");
         else
             System.out.println("non simmetrica");
-        System.out.println("\nsomma righe");
+        System.out.println("\narray esmpio somma");
         int[] aSommaR=sommaR(numeri);
         System.out.println(stampa(numeri));
-        System.out.println("->");
+        System.out.println("->righe");
         System.out.println(stampa(aSommaR));
+        int[] aSommaC=sommaC(numeri);
+        System.out.println("->colonne");
+        System.out.println(stampa(aSommaC));
+
+    }
+    public static int[] sommaC (int[][] x){
+        int[] y=new int[x.length];
+        for (int i=0; i<x.length; i++){
+            for (int j=0; j<x[i].length; j++){
+                y[i]+=x[j][i];
+            }
+        }
+        return y;
     }
     public static int[] sommaR (int[][] x){
-        int[] y=new int[x.length];
+        int[] y=new int[x[0].length];
         for (int i=0; i<x.length; i++){
             for (int j=0; j<x[i].length; j++){
                 y[i]+=x[i][j];
